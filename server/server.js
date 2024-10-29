@@ -9,30 +9,28 @@ const { authMiddleware } = require('./utils/auth');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: authMiddleware,
   introspection: true,
-  playground: true, 
+  playground: true,
+  cache: "bounded",
+  persistedQueries: false
 });
 
 (async function startServer() {
   await server.start();
   server.applyMiddleware({ app });
 
-  
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
 
- 
   app.use(express.static(path.join(__dirname, '../client/dist')));
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));
   });
 
-  
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`🌍 Now listening on http://localhost:${PORT}`);
