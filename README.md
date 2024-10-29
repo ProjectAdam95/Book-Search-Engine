@@ -130,7 +130,7 @@ If you want to contribute code:
 
   ## :camera: Gallery
 
-Here’s a preview of the portfolio page showcasing the project:
+Here’s the preview photos of the deployed page!:
 
 - [Portfolio Screenshot](https://imgur.com/a/EHFy65u)
 
