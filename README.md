@@ -132,7 +132,7 @@ If you want to contribute code:
 
 Here’s the preview photos of the deployed page!:
 
-- [Portfolio Screenshot](https://imgur.com/a/EHFy65u)
+- [Screenshots](https://imgur.com/a/EHFy65u)
 
 ## :star2: Credit/Acknowledgment
 
